@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Thara ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at center, #8d0018 0%, #51000d 48%, #180006 100%);
+  color: #fff0e7;
+  font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 0, 45, 0.10),
+    transparent 40%,
+    rgba(0, 0, 0, 0.35)
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  top: -30px;
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 220, 230, 0.35);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+.container {
+  width: min(92%, 650px);
+  margin: auto;
+  padding: 55px 0 45px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: #edc58b;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+h1 {
+  color: #fff0e8;
+  font-size: clamp(38px, 9vw, 66px);
+  font-weight: normal;
+  line-height: 1.08;
+  text-shadow: 0 0 25px rgba(255, 150, 170, 0.25);
+}
+
+h1 span {
+  color: #f4c78e;
+  font-style: italic;
+}
+
+.subtitle {
+  margin: 17px auto 30px;
+  color: #e6c6c8;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 7px;
+  background: rgba(255, 225, 195, 0.15);
+  border: 1px solid rgba(255, 218, 170, 0.45);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 570px;
+  object-fit: contain;
+}
+
+.caption {
+  color: #f4ce91;
+  font-size: 17px;
+  font-style: italic;
+  margin: 18px 0 35px;
+}
+
+.divider {
+  width: 65px;
+  height: 1px;
+  background: #e8b979;
+  margin: 25px auto;
+}
+
+.letter {
+  text-align: left;
+  padding: 28px 25px;
+  border: 1px solid rgba(241, 197, 160, 0.28);
+  background: rgba(30, 0, 8, 0.36);
+  line-height: 2;
+  color: #f8e5df;
+  font-size: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.letter h2 {
+  text-align: center;
+  color: #f2c58c;
+  font-size: 27px;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 22px;
+}
+
+.letter p {
+  margin-bottom: 15px;
+}
+
+.signature {
+  text-align: right;
+  color: #f2c58c;
+  font-style: italic;
+  margin-top: 22px;
+}
+
+h3 {
+  margin: 38px 0 12px;
+  color: #f3c48e;
+  font-size: 27px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.question {
+  color: #e8cfd0;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  padding: 13px 23px;
+  border: 1px solid #eac18d;
+  background: transparent;
+  color: #ffe8d4;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: #f1c28b;
+  color: #50000d;
+  transform: translateY(-2px);
+}
+
+#response {
+  display: none;
+  margin: 24px auto 0;
+  padding: 20px;
+  border: 1px solid rgba(241, 197, 160, 0.35);
+  background: rgba(20, 0, 5, 0.4);
+  color: #ffe2d4;
+  line-height: 1.9;
+  animation: appear 0.8s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.music-button {
+  margin-top: 28px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.footer {
+  margin-top: 40px;
+  color: #cfa9a8;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.heart {
+  color: #f5bd90;
+  font-size: 19px;
+}
+
+@media (max-width: 480px) {
+  .container { padding-top: 38px; }
+  .letter { padding: 22px 18px; }
+  .subtitle { font-size: 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="rain" id="rain"></div>
+
+<main class="container">
+
+  <p class="eyebrow">A little something from my heart</p>
+
+  <h1>For You,<br><span>Thara.</span></h1>
+
+  <p class="subtitle">
+    Sila vaarthaigal kaayapaduthidum...<br>
+    aana sila manasugal namakku romba special. ❤️
+  </p>
+
+  <div class="photo-frame">
+    <img src="thara.jpg" alt="A special memory">
+  </div>
+
+  <p class="caption">kalyanam is for fools &lt;3</p>
+
+  <div class="divider"></div>
+
+  <section class="letter">
+    <h2>En Thara-ku...</h2>
+
+    <p>
+      Thara, ❤️
+    </p>
+
+    <p>
+      Namma rendu perukkum sanda varalaam.
+      Aana kovathula naan pesina vaarthaigal
+      unna hurt pannirundhaa, manasara sorry di.
+    </p>
+
+    <p>
+      Andha moment-la en kovathai control
+      pannirukkanum. Un feelings-ah purinjittu
+      pesirukkanum. Unna hurt panninadhu
+      enakku varuthama irukku.
+    </p>
+
+    <p>
+      "Sorry" nu oru vaarthai sollittu ellam
+      sari aagidanum nu naan expect pannala.
+      En actions-la unakku respect-um care-um
+      kaattanum nu purinjikitten.
+    </p>
+
+    <p>
+      Nee udane pesanum nu pressure panna
+      maaten. Unakku time venumna eduthuko.
+      Nee ready-a irukkumbodhu namma calm-ah
+      pesalaam.
+    </p>
+
+    <p>
+      Enakku namma relationship mukkiyam di.
+      Un feelings-um mukkiyam. Naan thappu
+      pannina adhai accept panni better-ah
+      nadandhukka try panren.
+    </p>
+
+    <p>
+      Un manasu konjamavadhu light aaganum
+      nu dhaan indha chinna effort.
+      Unakku hurt pannadhukku sorry, Thara.
+    </p>
+
+    <p class="signature">
+      Unna care pannura,<br>
+      naan. ❤️
+    </p>
+  </section>
+
+  <h3>Can we talk, Thara?</h3>
+
+  <p class="question">
+    No pressure, no forcing.<br>
+    Nee ready-ah irukkumbodhu mattum. ❤️
+  </p>
+
+  <div class="buttons">
+    <button onclick="showResponse('talk')">
+      Pesalaam ❤️
+    </button>
+
+    <button onclick="showResponse('time')">
+      Konjam time venum
+    </button>
+  </div>
+
+  <div id="response"></div>
+
+  <button class="music-button" id="musicBtn" onclick="toggleMusic()">
+    ♫ Play our song
+  </button>
+
+  <audio id="song" loop preload="none">
+    <source src="munbe-vaa.mp3" type="audio/mpeg">
+  </audio>
+
+  <p class="footer">
+    MADE WITH LOVE <span class="heart">♥</span> JUST FOR YOU
+  </p>
+
+</main>
+
+<script>
+/* Rain animation */
+const rain = document.getElementById("rain");
+
+for (let i = 0; i < 85; i++) {
+  const drop = document.createElement("span");
+  drop.className = "drop";
+  drop.style.left = Math.random() * 100 + "%";
+  drop.style.animationDuration = (0.7 + Math.random() * 1.3) + "s";
+  drop.style.animationDelay = (Math.random() * 3) + "s";
+  drop.style.opacity = 0.2 + Math.random() * 0.6;
+  rain.appendChild(drop);
+}
+
+/* Respect her choice */
+function showResponse(choice) {
+  const response = document.getElementById("response");
+
+  if (choice === "talk") {
+    response.innerHTML =
+      "Thank you for being willing to talk, Thara. ❤️<br>" +
+      "Namma rendu perum calm-ah pesalaam. " +
+      "Un feelings-ah naan ketka ready-ah irukken.";
+  } else {
+    response.innerHTML =
+      "It's okay, Thara. ❤️<br>" +
+      "Unakku thevaiyana time eduthuko. " +
+      "Naan unna pressure panna maaten. " +
+      "Nee ready-ah irukkumbodhu pesalaam.";
+  }
+
+  response.style.display = "block";
+  response.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+/* Music controls */
+const song = document.getElementById("song");
+const musicBtn = document.getElementById("musicBtn");
+
+async function toggleMusic() {
+  if (song.paused) {
+    try {
+      await song.play();
+      musicBtn.textContent = "♫ Pause our song";
+    } catch (error) {
+      musicBtn.textContent = "Song unavailable — check audio file";
+    }
+  } else {
+    song.pause();
+    musicBtn.textContent = "♫ Play our song";
+  }
+}
+</script>
+
+</body>
+</html>
